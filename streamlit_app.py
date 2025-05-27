@@ -15,7 +15,7 @@ models_4x = ['EDSR_x4.pb', 'ESPCN_x4.pb',
 models_8x = ['LapSRN_x8.pb']
 
 BASE_PATH = 'models/'
-STREAMLIT = True # change it to False if you are running in your local machine.
+STREAMLIT = False # change it to False if you are running in your local machine.
 
 ############################# start - functions ################################
 
@@ -71,20 +71,9 @@ def model_selector(scale: str) -> str:
 
 ############################# start - Streamlit ################################
 
-st.title('Free Image Upscaler Using Deep Learning 📸')
+st.title('Image Upscaler Using Deep Learning')
 st.markdown(
-    'By [Mehrdad Mohammadian](https://mehrdad-dev.github.io)', unsafe_allow_html=True)
-
-about = """
-This demo provides a simple interface to upscale your images using deep learning (AI). 
-In streamlit, there is a shortage in terms of CPU, to solve this issue use codes in 
-GitHub on your own device or use another scale twice.
-
-
-**Note:** If you see a error like "Oh, no - Error running app", it is because CPU shortage in streamlit.
-"""
-st.markdown(about, unsafe_allow_html=True)
-
+    'Adapted from [Mehrdad Mohammadian](https://mehrdad-dev.github.io)', unsafe_allow_html=True)
 scale = st.selectbox(
     'Which scale do you want to apply to your image?',
     ('Not selected', '2x', '3x', '4x', '8x'))
