@@ -16,12 +16,12 @@
 ### Clonar o projeto
     
     git clone https://github.com/fahadkalil/image_upscaler.git    
+    cd image_upscaler
 
 ### Criar e ativar o virtualenv para o projeto
 
-- Windows
-    
-      cd image_upscaler
+- Windows    
+      
       python -m venv .venv
       .venv/Scripts/activate.bat
 
@@ -31,10 +31,10 @@
       python -m venv .venv
       source .venv/bin/activate
 
-### Instalar dependências:
+### Instalar dependências
     
     pip install -r requirements.txt
 
-### Para rodar (confira a saída do comando):
+### Para rodar (confira a saída do comando)
 
     streamlit run streamlit_app.py
